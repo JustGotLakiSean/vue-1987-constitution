@@ -15,7 +15,7 @@ const isButtonDisabled = ref(true)
                 {{ count }}
             </button>
             <!-- :href for shorthand for v-bind:attr-->
-             <!-- :href if the same name as the attr-->
+            <!-- :href if the same name as the attr-->
             <a v-bind:href="href">Lawphil</a>
             <h2>
                 {{ preambleHeader }}
