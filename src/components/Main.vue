@@ -3,11 +3,15 @@ import {ref} from 'vue'
 const preambleHeader = ref('Preamble')
 const nationalTerrHeader = ref('National Territory')
 const statePolHeader = ref('Declaration of Priciples and State Policies Principles')
+const count = ref(0);
 </script>
 
 <template>
     <main>
         <section>
+            <button @click="count++">
+                {{ count }}
+            </button>
             <h2>
                 {{ preambleHeader }}
             </h2>
