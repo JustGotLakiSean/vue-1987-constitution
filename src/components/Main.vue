@@ -4,14 +4,19 @@ const preambleHeader = ref('Preamble')
 const nationalTerrHeader = ref('National Territory')
 const statePolHeader = ref('Declaration of Priciples and State Policies Principles')
 const count = ref(0);
+const href = ref('https://lawphil.net/')
+const isButtonDisabled = ref(true)
 </script>
 
 <template>
     <main>
         <section>
-            <button @click="count++">
+            <button v-bind:disabled="isButtonDisabled" @click="count++">
                 {{ count }}
             </button>
+            <!-- :href for shorthand for v-bind:attr-->
+             <!-- :href if the same name as the attr-->
+            <a v-bind:href="href">Lawphil</a>
             <h2>
                 {{ preambleHeader }}
             </h2>
@@ -84,5 +89,18 @@ h2 {
 p {
     font-size: 0.9rem;
     color: #555;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background: grey;
+    cursor: not-allowed;
+    opacity: 0.5;
 }
 </style>
