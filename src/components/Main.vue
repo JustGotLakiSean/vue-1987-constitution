@@ -6,6 +6,12 @@ const statePolHeader = ref('Declaration of Priciples and State Policies Principl
 const count = ref(0);
 const href = ref('https://lawphil.net/')
 const isButtonDisabled = ref(true)
+
+const facts = ref([
+    { "constitutionTitle": "Preamble", "constitutionContent": "We, the sovereign Filipino people, imploring the aid of Almighty God, in order to build a just and humane society"},
+    { "constitutionTitle": "National Teritorry", "constitutionContent": "The national territory comprises" },
+    { "constitutionTitle": "Article II", "constitutionContent": "Section 1" }
+])
 </script>
 
 <template>
@@ -15,16 +21,13 @@ const isButtonDisabled = ref(true)
                 {{ count }}
             </button>
             <!-- :href for shorthand for v-bind:attr-->
-            <!-- :href if the same name as the attr-->
+            <!-- only :href if the same name as the attr-->
             <a v-bind:href="href">Lawphil</a>
             <h2>
-                {{ preambleHeader }}
+                {{ facts[0].constitutionTitle }}
             </h2>
             <p>
-                We, the sovereign Filipino people, imploring the aid of Almighty God, in order to build a just and humane society, and establish a Government 
-                that shall embody our ideals and aspirations, promote the common good, conserve and develop our patrimony, and secure to ourselves and our 
-                posterity, the blessings of independence and democracy under the rule of law and a regime of truth, justice, freedom, love, equality, and peace, 
-                do ordain and promulgate this Constitution.
+                {{ facts[0].constitutionContent }}
             </p>
         </section>
         <section>
@@ -32,13 +35,10 @@ const isButtonDisabled = ref(true)
                 ARTICLE I
             </h2>
             <h2>
-                {{ nationalTerrHeader }}
+                {{ facts[1].constitutionTitle }}
             </h2>
             <p>
-                The national territory comprises the Philippine archipelago, with all the islands and waters embraced therein, and all other territories over which 
-                the Philippines has sovereignty or jurisdiction, consisting of its terrestrial, fluvial and aerial domains, including its territorial sea, the seabed, 
-                the subsoil, the insular shelves, and other submarine areas. The waters around, between, and connecting the islands of the archipelago, regardless of their 
-                breadth and dimensions, form part of the internal waters of the Philippines.
+                {{ facts[1].constitutionContent }}
             </p>
         </section>
         <section>

@@ -1,7 +1,7 @@
 <script setup>
 import {ref} from 'vue'
 const headerTitle = ref('1987 CONSTITUTION OF THE REPUBLIC OF THE PHILIPPINES')
-headerTitle.value = '1987 Philippine Constitution'
+headerTitle.value = '1987 Philippine Constitution' // text interpolation
 </script>
 
 <template>
