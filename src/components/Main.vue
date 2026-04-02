@@ -6,7 +6,9 @@ const statePolHeader = ref('Declaration of Priciples and State Policies Principl
 const count = ref(0);
 const href = ref('https://lawphil.net/')
 const isButtonDisabled = ref(true)
+import lawImage from '@/assets/images/law.png'
 
+// wrap array of objects inside the ref to make it reactive
 const facts = ref([
     { "constitutionTitle": "Preamble", "constitutionContent": "We, the sovereign Filipino people, imploring the aid of Almighty God, in order to build a just and humane society"},
     { "constitutionTitle": "National Teritorry", "constitutionContent": "The national territory comprises" },
@@ -17,6 +19,14 @@ const facts = ref([
 <template>
     <main>
         <section>
+            <!-- absolute path to /public folder -->
+            <!-- <img src="/images/law_image.jpg" alt="" /> -->
+            
+            <!-- relative path to /assets folder -->
+            <!-- <img src="@/assets/images/law.png" alt="" /> -->
+
+            <!-- import asset or bind an image to the src attr -->
+            <!-- <img v-bind:src="lawImage" alt /> -->
             <button v-bind:disabled="isButtonDisabled" @click="count++">
                 {{ count }}
             </button>
